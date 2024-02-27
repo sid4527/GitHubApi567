@@ -1,5 +1,4 @@
 import requests
-
 def get_user_repositories(user_id):
   
     url = f"https://api.github.com/users/{user_id}/repos"
