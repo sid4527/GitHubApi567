@@ -4,4 +4,4 @@ python:
 
 # command to run tests
 script:
- - python -m unittest TestGetUserRepositories
+ - python -m unittest Tester
