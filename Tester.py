@@ -7,7 +7,6 @@ class TestGetUserRepositories(unittest.TestCase):
 
     @patch('requests.get')
     def test_get_user_repositories_success(self, mock_get):
-        # Mock the response for successful API call
         mock_get.return_value.status_code = 200
         mock_get.return_value.json.return_value = [{'name': 'repo1'}, {'name': 'repo2'}]
 
@@ -17,7 +16,6 @@ class TestGetUserRepositories(unittest.TestCase):
 
     @patch('requests.get')
     def test_get_user_repositories_failed_request(self, mock_get):
-        # Mock the response for failed API call
         mock_get.return_value.status_code = 404
 
         repos_with_commits = get_user_repositories('test_user')
@@ -25,7 +23,6 @@ class TestGetUserRepositories(unittest.TestCase):
 
     @patch('requests.get')
     def test_get_user_repositories_failed_commits_request(self, mock_get):
-        # Mock the response for successful API call but failed commits request
         mock_get.side_effect = [
             Mock(status_code=200, json=lambda: [{'name': 'repo1'}]),
             Mock(status_code=404)
