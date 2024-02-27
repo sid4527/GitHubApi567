@@ -1,2 +1,2 @@
 # GitHubApi567
-[![build status of master](https://travis-ci.org/tsmith567/Triangle567.svg?branch=master)](https://travis-ci.org/tsmith567/Triangle567)
+[![build status of master](https://travis-ci.org/sid4527/GitHubApi567.svg?branch=main)](https://travis-ci.org/sid4527/GitHubApi567)
